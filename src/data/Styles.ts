@@ -33,17 +33,10 @@ export const cardBodyStyles: SxProps = {
 };
 
 export const cardActionStyles: SxProps = {
-	justifyContent: 'flex-start',
+	justifyContent: 'flex-end',
 	paddingLeft: '1.5',
 	paddingBottom: '0',
 	paddingTop: '25px',
-};
-
-export const buttonStyles: SxProps = {
-	color: 'primary',
-	textDecoration: 'none',
-	fontWeight: 'bold',
-	fontSize: '0.9em',
 };
 
 export const cardContentStyles: SxProps = {
@@ -51,4 +44,8 @@ export const cardContentStyles: SxProps = {
 	borderRadius: '10px',
 	boxShadow: '0 3px 8px rgba(0, 0, 0, 0.05)',
 	transition: 'transform 0.2s ease',
+};
+
+export const spacedDivider: SxProps = {
+	my: 4,
 };

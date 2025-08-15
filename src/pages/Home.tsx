@@ -1,5 +1,3 @@
-/** REACT */
-
 /** MUI COMPONENTS */
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
@@ -18,10 +16,18 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import SectionWrapper from '../components/Section';
 
 /** SETTINGS & DATA */
-import { containerStyles, iconStyles, textStyle } from '../data/Styles';
+import { containerStyles, iconStyles, spacedDivider, textStyle } from '../data/Styles';
 import Settings from '../data/Settings';
 import CardLinks from '../components/CardLinks';
 import Grid from '@mui/material/Grid';
+import type { CardTypes } from '../data/Types';
+
+/** THE DATA */
+const links: CardTypes[] = [
+    { title: 'View Demo', desc: "View the Live Demo for this project", link: Settings.liveDemo ?? '', icon: RocketLaunchIcon, type: '' },
+    { title: 'View Docs', desc: "View the TypeDoc documentation for this project", link: Settings.docs ?? '', icon: DescriptionIcon },
+    { title: 'View GitHub Repo', desc: "View the GitHub Repo for the project", link: Settings.githubRepo ?? '', icon: GitHubIcon }
+].filter(Boolean) as CardTypes[];
 
 /** The Home Page */
 const HomePage = () => {
@@ -38,7 +44,7 @@ const HomePage = () => {
                     />
                     {Settings.title}
                 </Typography>
-                <Divider sx={{ my: 4 }} />
+                <Divider sx={spacedDivider} />
             </Box>
             <SectionWrapper title="Overview">
                 <Card elevation={3}>
@@ -48,31 +54,10 @@ const HomePage = () => {
                 </Card>
             </SectionWrapper>
             <SectionWrapper title="View Information">
-                <Grid container spacing={3}>
-                    {Settings.liveDemo && (
-                        <CardLinks
-                            title="View Demo"
-                            desc="View the Live Demo for this project"
-                            link={Settings.liveDemo}
-                            icon={RocketLaunchIcon}
-                        />
-                    )}
-                    {Settings.docs && (
-                        <CardLinks
-                            title="View Docs"
-                            desc="View the TypeDoc documentation for this project"
-                            link={Settings.docs}
-                            icon={DescriptionIcon}
-                        />
-                    )}
-                    {Settings.githubRepo && (
-                        <CardLinks
-                            title="View GitHub Repo"
-                            desc="View the GitHub Repo for the project"
-                            link={Settings.githubRepo}
-                            icon={GitHubIcon}
-                        />
-                    )}
+                <Grid container spacing={3} sx={{ alignItems: 'stretch' }}>
+                    {links.map((link, index) => (
+                        <CardLinks {...link} key={`${link.title}-${index}`} />
+                    ))}
                 </Grid>
             </SectionWrapper>
         </Container>

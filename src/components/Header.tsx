@@ -17,6 +17,8 @@ import Box from '@mui/material/Box';
 
 import LightModeIcon from '@mui/icons-material/LightModeOutlined';
 import DarkModeIcon from '@mui/icons-material/DarkModeOutlined';
+
+/** TYPES & STYLES */
 import type { HeaderProps } from '../data/Types';
 import { divCenter } from '../data/Styles';
 
