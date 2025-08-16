@@ -1,3 +1,4 @@
+/** ======= TYPES ======= */
 import type { Color, FooterButtonType } from './Types';
 
 export const defaultColor = (color?: Color) => (color ? color : 'primary');

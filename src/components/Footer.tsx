@@ -1,16 +1,16 @@
-/** MUI COMPONENTS */
+/** ======= MUI COMPONENTS ======= */
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-/** ICONS */
+/** ======= ICONS ======= */
 import Email from '@mui/icons-material/Email';
 import GitHub from '@mui/icons-material/GitHub';
 import LinkedIn from '@mui/icons-material/LinkedIn';
 
-/** CUSTOM COMPONENT */
+/** ======= CUSTOM COMPONENT ======= */
 import FooterButton from './FooterButton';
 
-/** DATA */
+/** ======= DATA ======= */
 import type { FooterProps } from '../data/Types';
 
 const buttons: FooterProps[] = [
@@ -19,7 +19,7 @@ const buttons: FooterProps[] = [
     { title: 'LinkedIn', type: 'link', href: `https://linkedin.com/in/mohammadelhsn`, icon: LinkedIn }
 ];
 
-// Footer component
+/** Footer Component */
 const Footer = () => {
     return (
         <Box component="footer" sx={{

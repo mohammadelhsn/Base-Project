@@ -1,21 +1,7 @@
+/** ======= TYPES ======= */
 import type { SvgIconTypeMap } from '@mui/material';
 import type { OverridableComponent } from '@mui/material/OverridableComponent';
 import type { ElementType } from 'react';
-
-export interface SettingsObj {
-	/** The title for the project */
-	title: string;
-	/** The description for the project */
-	description: string;
-	/** The stack for the project */
-	stack: string[];
-	/** The live demo site for the project */
-	liveDemo?: string;
-	/** The doc site for the project */
-	docs?: string;
-	/** The GitHub repo for the project */
-	githubRepo?: string;
-}
 
 export interface SectionOpts {
 	/** The title for the section */

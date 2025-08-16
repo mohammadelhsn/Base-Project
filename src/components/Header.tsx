@@ -1,9 +1,7 @@
-/** REACT */
-
+/** ======= REACT ======= */
 import { type FC } from 'react';
 
-/** MUI COMPONENTS */
-
+/** ======= MUI COMPONENTS ======= */
 import { styled, useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -13,12 +11,11 @@ import AppBar from '@mui/material/AppBar';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 
-/** ICONS */
-
+/** ======= ICONS ======= */
 import LightModeIcon from '@mui/icons-material/LightModeOutlined';
 import DarkModeIcon from '@mui/icons-material/DarkModeOutlined';
 
-/** TYPES & STYLES */
+/** ======= TYPES & STYLES ======= */
 import type { HeaderProps } from '../data/Types';
 import { divCenter } from '../data/Styles';
 
@@ -34,6 +31,7 @@ const StyledExternalLink = styled(Link)(({ theme }) => ({
     },
 }));
 
+/** Header for this project */
 const Header: FC<HeaderProps> = ({ mode, toggleColorMode }) => {
     const theme = useTheme();
     return (

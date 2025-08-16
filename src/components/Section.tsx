@@ -1,12 +1,12 @@
-/** MUI COMPONENTS */
-
+/** ======= MUI COMPONENTS ======= */
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
-/** DATA */
+/** ======= DATA ======= */
 import { type SectionOpts } from '../data/Types';
 import { iconStyles } from '../data/Styles';
 
@@ -21,26 +21,24 @@ const SectionWrapper = (opts: SectionOpts) => {
                     borderRadius: 2,
                 }}
             >
+                <CardHeader title={
+                    <>
+                        <Typography
+                            variant="h4"
+                            sx={{ display: 'flex', alignItems: 'center' }}
+                        >
+                            {opts.icon && (
+                                <opts.icon
+                                    fontSize="inherit"
+                                    sx={iconStyles}
+                                />
+                            )}
+                            {opts.title}
+                        </Typography>
+                        <Divider sx={{ mt: 2 }} />
+                    </>
+                } />
                 <CardContent>
-                    <Typography
-                        variant="h4"
-                        color='textPrimary'
-                        sx={{ display: 'flex', alignItems: 'center', mb: 2 }}
-                    >
-                        {opts.icon && (
-                            <opts.icon
-                                fontSize="inherit"
-                                sx={iconStyles}
-                            />
-                        )}
-                        {opts.title}
-                    </Typography>
-                    <Divider
-                        sx={{
-                            my: 2,
-                            borderColor: ({ palette }) => palette.divider,
-                        }}
-                    />
                     <Box>{opts.children}</Box>
                 </CardContent>
             </Card>

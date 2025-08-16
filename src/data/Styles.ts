@@ -1,15 +1,19 @@
+/** ======= TYPES ======= */
 import type { SxProps } from '@mui/material';
 
+/** Default Container Styles */
 export const containerStyles: SxProps = {
 	px: { xs: 2, sm: 3 },
 	py: { xs: 4, sm: 6 },
 };
 
+/** Default Icon Styles */
 export const iconStyles: SxProps = {
 	color: 'primary.main',
 	mr: 1.5,
 };
 
+/** Default Text Styles */
 export const textStyle: SxProps = {
 	display: 'flex',
 	alignItems: 'center', // use "center" instead of "top" for visual balance
@@ -17,11 +21,14 @@ export const textStyle: SxProps = {
 	flexWrap: 'wrap', // allow wrapping inside flex container
 	wordBreak: 'break-word', // break long words if needed
 };
+
+/** Default Divider Style */
 export const dividerStyle: SxProps = {
 	margin: '2rem 0',
 	marginLeft: 0,
 };
 
+/** Default center styles */
 export const divCenter: SxProps = {
 	display: 'flex',
 	alignItems: 'center',

@@ -1,9 +1,9 @@
-/** MUI COMPONENT  */
+/** ======= MUI COMPONENT =======  */
 import IconButton from '@mui/material/IconButton';
 
-/** TYPES & FUNCTIONS */
-import type { FooterProps } from '../data/Types';
+/** ======= TYPES & FUNCTIONS ======= */
 import { defaultAriaLabel, defaultColor, defaultRel, defaultTarget } from '../data/Functions';
+import type { FooterProps } from '../data/Types';
 
 /** */
 const FooterButton = (props: FooterProps) => {

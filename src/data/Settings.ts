@@ -1,38 +1,40 @@
-import type { SettingsObj } from './Types';
-
-//! This should be fetching data from Firebase???
-
 class SettingsClass {
-	/** The project's title */
-	title: string;
-	/** The project's description */
-	description: string;
-	/** The stack for the project */
-	stack: string[];
-	/** The live demo for the project */
-	liveDemo: string | null;
-	/** The docs URL */
-	docs: string | null;
-	/** The GitHub repo for the project */
-	githubRepo: string | null;
-	constructor(props: SettingsObj) {
-		this.title = props.title;
-		this.description = props.description;
-		this.stack = props.stack;
-		this.liveDemo = props.liveDemo ? props.liveDemo : null;
-		this.docs = props.docs ? props.docs : null;
-		this.githubRepo = props.githubRepo ? props.githubRepo : null;
+	/** The Project's Firestore ID */
+	id: string;
+	/** Your name */
+	name: string;
+	/** Your GitHub URL */
+	github: string;
+	/** Your LinkedIn URL */
+	linkedin: string;
+	/** Your Email */
+	mail: string;
+	/**
+	 * Builds the static data (mainly for the footer)
+	 *
+	 * @param id The project's Firestore ID
+	 * @param name Your name
+	 * @param username Your username
+	 */
+	constructor(id: string, name: string, username: string) {
+		this.id = id;
+		this.name = name;
+		this.github = `https://github.com/${username}`;
+		this.linkedin = `https://linkedin.com/in/${username}`;
+		this.mail = `${username}@gmail.com`;
 	}
 }
 
-const Settings = new SettingsClass({
-	title: 'CP213-Docs',
-	description:
-		'A React + Vite + TypeScript project that displays TypeDoc documentation for the CP213 course project.',
-	stack: ['React', 'TypeScript', 'Vite', 'Material UI', 'TypeDoc'],
-	liveDemo: 'https://mohammadelhsn.github.io/CP213-Docs',
-	docs: 'https://mohammadelhsn.github.io/CP213-Docs/docs',
-	githubRepo: 'https://github.com/mohammadelhsn/CP213-Docs',
-});
+/** The project ID */
+const PROJECT_ID = 'RcXVHvEzoghFoPsbJyTe';
+
+/** My username */
+const USERNAME = `mohammadelhsn`;
+
+/** My name */
+const NAME = 'Mohammad El-Hassan';
+
+/** The settings object for this project */
+const Settings = new SettingsClass(PROJECT_ID, NAME, USERNAME);
 
 export default Settings;

@@ -1,3 +1,4 @@
+/** ======= MUI ======= */
 import { createTheme } from '@mui/material';
 
 /** The primary colour for this project */
