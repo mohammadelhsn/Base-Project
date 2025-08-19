@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
 export default defineConfig({
-	base: '/CP104-Docs/',
+	base: '/CP164-Docs/',
 	plugins: [react()],
 });
