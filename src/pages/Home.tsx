@@ -30,10 +30,13 @@ import type { CardTypes } from '../data/Types';
 import { useTheme } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { fetchProject, type FirestoreProject } from '../data/Firebase';
+import LoadingComp from '../components/LoadingPage';
+import ErrorComp from '../components/ErrorComp';
 
 /** The Home Page */
 const HomePage = () => {
     const [project, setProject] = useState<FirestoreProject | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
     useEffect(() => {
         if (project) return;
 
@@ -41,20 +44,22 @@ const HomePage = () => {
             try {
                 const data = await fetchProject(Settings.id);
                 if (data) setProject(data);
+                setLoading(false);
             } catch (err) {
                 console.error('Failed to fetch project:', err);
             }
         })();
     }, [project]);
     const { palette } = useTheme();
-    if (!project) return (<Typography>Some Error has occurred!</Typography>);
+    if (loading) return <LoadingComp />;
+    if (!project) return <ErrorComp />;
     const links: CardTypes[] = [
         { title: 'Demo', desc: "View the Live Demo for this project", link: project.liveDemo, icon: RocketLaunchIcon, type: '' },
         { title: 'Docs', desc: "View the TypeDoc documentation for this project", link: project.docs, icon: DescriptionIcon },
         { title: 'GitHub Repo', desc: "View the GitHub Repo for the project", link: project.github, icon: GitHubIcon }
     ].filter(link => link.link) as CardTypes[];
     return (
-        <Container maxWidth='xl' sx={containerStyles}>
+        <Container maxWidth='lg' sx={containerStyles}>
             <Box>
                 <Typography
                     variant="h2"
@@ -119,9 +124,9 @@ const HomePage = () => {
                 <Grid container spacing={3} sx={{ alignItems: 'stretch' }}>
                     {links.map((link, index) => {
                         const numLinks = links.length;
-                        const xs = 12; // always full width on extra-small screens
-                        const sm = numLinks === 1 ? 12 : 6; // 1 card = full width, 2+ cards = half
-                        const md = numLinks === 1 ? 12 : numLinks === 2 ? 6 : 4; // 1 = full, 2 = half, 3 = third
+                        const xs = 12;
+                        const sm = numLinks === 1 ? 12 : 6;
+                        const md = numLinks === 1 ? 12 : numLinks === 2 ? 6 : 4;
                         return (
                             <Grid size={{ xs: xs, sm: sm, md: md }}>
                                 <CardLinks {...link} key={`${link.title}-${index}`} />
