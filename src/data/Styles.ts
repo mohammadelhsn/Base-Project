@@ -5,6 +5,7 @@ import type { SxProps } from '@mui/material';
 export const containerStyles: SxProps = {
 	px: { xs: 2, sm: 3 },
 	py: { xs: 4, sm: 6 },
+	flexGrow: 1,
 };
 
 /** Default Icon Styles */

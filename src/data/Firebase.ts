@@ -1,5 +1,4 @@
 import { initializeApp } from 'firebase/app';
-import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
 import {
 	initializeFirestore,
 	persistentLocalCache,
@@ -26,11 +25,6 @@ export const db = initializeFirestore(app, {
 	localCache: persistentLocalCache({
 		tabManager: persistentMultipleTabManager(),
 	}),
-});
-
-export const appCheck = initializeAppCheck(app, {
-	provider: new ReCaptchaV3Provider(import.meta.env.VITE_FIREBASE_APP_CHECK),
-	isTokenAutoRefreshEnabled: true,
 });
 
 export type FirestoreProj = {
