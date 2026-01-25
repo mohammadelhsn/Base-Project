@@ -9,7 +9,6 @@ import Typography from '@mui/material/Typography';
 
 /** ======= TYPES, SETTINGS & STYLES ======= */
 import { type CardTypes } from '../data/Types';
-//import Settings from '../data/Settings';
 import {
     iconStyles,
     textStyle
@@ -18,14 +17,12 @@ import {
 
 /** Card Links component */
 const CardLinks = (opts: CardTypes) => {
-    //const small = Settings.exampleEnable == false ? 8 : 6;
-    //const md = Settings.exampleEnable == false ? 6 : 4;
     return (
         <Card elevation={3} sx={{
             height: '100%',
             display: 'flex',
             flexDirection: 'column',
-            transition: 'transform 0.2s ease-in-out', // smooth animation
+            transition: 'transform 0.2s ease-in-out',
             '&:hover': {
                 transform: 'scale(1.01)',
             }

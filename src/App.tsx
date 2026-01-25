@@ -1,10 +1,8 @@
 /** REACT */
-
 import { Routes, Route, HashRouter, Navigate } from 'react-router-dom';
 import { useMemo, useState } from 'react';
 
 /** COMPONENTS */
-
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -12,20 +10,16 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 
 /** THEME */
-
 import { ThemeProvider } from '@mui/material/styles';
 import { lightTheme, darkTheme } from './data/Theme';
 import CssBaseline from '@mui/material/CssBaseline';
 
 /** STYLES */
-
 import './App.css';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import LoadingComp from './components/LoadingPage';
-import ErrorComp from './components/ErrorComp';
 
 
 const App = () => {
@@ -51,7 +45,6 @@ const App = () => {
         <Header toggleColorMode={toggleColorMode} mode={`${mode}`} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/loadingTest" element={<ErrorComp />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />

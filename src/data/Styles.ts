@@ -17,10 +17,10 @@ export const iconStyles: SxProps = {
 /** Default Text Styles */
 export const textStyle: SxProps = {
 	display: 'flex',
-	alignItems: 'center', // use "center" instead of "top" for visual balance
-	mb: 1, // space between heading and subheading
-	flexWrap: 'wrap', // allow wrapping inside flex container
-	wordBreak: 'break-word', // break long words if needed
+	alignItems: 'center',
+	mb: 1,
+	flexWrap: 'wrap',
+	wordBreak: 'break-word',
 };
 
 /** Default Divider Style */

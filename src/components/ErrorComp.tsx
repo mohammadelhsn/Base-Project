@@ -7,7 +7,7 @@ import Paper from '@mui/material/Paper';
 const ErrorComp = () => {
     return (
         <Container maxWidth="lg" sx={containerStyles}>
-            <Paper elevation={3}                  // subtle shadow
+            <Paper elevation={3}
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
