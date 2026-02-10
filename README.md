@@ -1,29 +1,27 @@
-# Base-Project
+# Portfolio Project Viewer
 
-Fetches data from the Firestore and changes the UI accordingly
+This React project fetches project data from **Firebase Firestore** and dynamically displays it in a portfolio interface. Each project is stored as a separate Firestore document and includes details such as title, description, tech stack, category, source, status, and optional links to GitHub, documentation, or live demos.  
 
-```ts
-interface Project {
-	/** The project's ID */
-	id: string;
-	/** The title of the project */
-	title: string;
-	/** The brief description of the project */
-	description: string;
-	/** The longer description of the project */
-	longDescription: string;
-	/** Where the project originated from */
-	source: 'Personal' | 'Coursework' | 'Hackathon' | 'Open Source';
-	/** What kind of project it is */
-	category: 'Frontend' | 'Backend' | 'Full-stack' | 'Mobile' | 'AI';
-	coverImage: string;
-	docs?: string;
-	github?: string;
-	liveDemo?: string;
-	tags: string[];
-	techStack: string[];
-	status: 'active' | 'in-progress' | 'archived';
-	createdAt: Timestamp;
-	updatedAt: Timestamp;
-}
-```
+When a user clicks on a project in the portfolio, the app renders all the relevant information in a clean and interactive UI.
+
+## 🛠️ Stack
+
+| Technology       | Purpose                                      |
+| ---------------- | -------------------------------------------- |
+| React            | Frontend framework for building the UI       |
+| Firebase Firestore | Backend database for storing project data  |
+| TypeScript       | Type safety for project objects             |
+| Tailwind CSS     | Styling and responsive design               |
+| Git & GitHub     | Version control                              |
+
+## 🔹 Features
+
+- Dynamically fetches project data from Firestore  
+- Displays project details: title, description, long description, tech stack, category, source, and status  
+- Optional links for: documentation, GitHub, live demo  
+- Projects are categorized by type: Personal, Coursework, Hackathon, Open Source  
+- Responsive UI for desktop and mobile  
+
+## 🟢 Status
+> Actively maintained and updated  
+
