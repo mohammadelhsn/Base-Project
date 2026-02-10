@@ -5,16 +5,16 @@ This React project fetches project data from **Firebase Firestore** and dynamica
 When a user clicks on a project in the portfolio, the app renders all the relevant information in a clean and interactive UI.
 
 ## 🛠️ Stack
+| Technology   | Icon                                                                       |
+| ------------ | -------------------------------------------------------------------------- |
+| React  | ![React](https://go-skill-icons.vercel.app/api/icons?i=react) |
+| NodeJS       | ![NodeJs](https://go-skill-icons.vercel.app/api/icons?i=nodejs)            |
+| TypeScript   | ![TypeScript](https://go-skill-icons.vercel.app/api/icons?i=ts)            |
+| Material-UI         | ![Material-UI](https://go-skill-icons.vercel.app/api/icons?i=mui)                |
+| Firebase      | ![Firebase](https://go-skill-icons.vercel.app/api/icons?i=firebase)             |
 
-| Technology       | Purpose                                      |
-| ---------------- | -------------------------------------------- |
-| React            | Frontend framework for building the UI       |
-| Firebase Firestore | Backend database for storing project data  |
-| TypeScript       | Type safety for project objects             |
-| Tailwind CSS     | Styling and responsive design               |
-| Git & GitHub     | Version control                              |
 
-## 🔹 Features
+## Features
 
 - Dynamically fetches project data from Firestore  
 - Displays project details: title, description, long description, tech stack, category, source, and status  
