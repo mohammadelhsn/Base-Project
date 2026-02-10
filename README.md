@@ -5,11 +5,11 @@ This React project fetches project data from **Firebase Firestore** and dynamica
 ## 🛠️ Stack
 | Technology   | Icon                                                                       |
 | ------------ | -------------------------------------------------------------------------- |
-| React  | ![React](https://go-skill-icons.vercel.app/api/icons?i=react) |
+| React        | ![React](https://go-skill-icons.vercel.app/api/icons?i=react)              |
 | NodeJS       | ![NodeJs](https://go-skill-icons.vercel.app/api/icons?i=nodejs)            |
 | TypeScript   | ![TypeScript](https://go-skill-icons.vercel.app/api/icons?i=ts)            |
-| Material-UI         | ![Material-UI](https://go-skill-icons.vercel.app/api/icons?i=mui)                |
-| Firebase      | ![Firebase](https://go-skill-icons.vercel.app/api/icons?i=firebase)             |
+| Material-UI  | ![Material-UI](https://go-skill-icons.vercel.app/api/icons?i=mui)          |
+| Firebase     | ![Firebase](https://go-skill-icons.vercel.app/api/icons?i=firebase)        |
 
 
 ## Features
