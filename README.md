@@ -1,4 +1,4 @@
-# Portfolio Project Viewer
+# Base-Project
 
 This React project fetches project data from **Firebase Firestore** and dynamically displays it in a portfolio interface. Each project is stored as a separate Firestore document and includes details such as title, description, tech stack, category, source, status, and optional links to GitHub, documentation, or live demos.  
 
