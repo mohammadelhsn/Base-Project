@@ -2,8 +2,6 @@
 
 This React project fetches project data from **Firebase Firestore** and dynamically displays it in a portfolio interface. Each project is stored as a separate Firestore document and includes details such as title, description, tech stack, category, source, status, and optional links to GitHub, documentation, or live demos.  
 
-When a user clicks on a project in the portfolio, the app renders all the relevant information in a clean and interactive UI.
-
 ## 🛠️ Stack
 | Technology   | Icon                                                                       |
 | ------------ | -------------------------------------------------------------------------- |
